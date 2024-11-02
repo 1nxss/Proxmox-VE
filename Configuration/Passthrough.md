@@ -78,8 +78,9 @@ echo "blacklist i915" >> /etc/modprobe.d/blacklist.conf
 4. Update config :
 
 ``update-initramfs -u -k all``
-5. GPU to the VFIO Settings: In this part, you will find several IDs of your GPU then configure those to the VFIO.
+5. Configuring modprobe - GPU to the VFIO Settings:
 
+In this part, you will find several IDs of your GPU then configure those to the VFIO.\
 Use `lspci -nn` or `lspci -v` to find VGA adapter. It will be similar to this:
 ```
 02:00.0 VGA compatible controller: NVIDIA Corporation GP106 [GeForce GTX 3060] (rev a1) (prog-if 00 [VGA controller])
