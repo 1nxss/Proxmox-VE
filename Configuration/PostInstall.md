@@ -31,3 +31,19 @@ deb http://deb.debian.org/debian bookworm non-free
 
 #--- Install the drivers:
 apt update && apt install intel-media-va-driver-non-free intel-gpu-tools vainfo
+```
+### Add vfio modules, using nano :
+
+``nano /etc/modules``
+
+```
+##--- Add the following modules :
+vfio
+vfio_pci
+vfio_virqfd
+vfio_iommu_type1
+# Modules required for Intel GVT
+kvmgt
+exngt
+Vfio-mdev
+```
